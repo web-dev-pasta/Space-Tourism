@@ -91,7 +91,7 @@ function Destination({ items }) {
                   key={i}
                   className={
                     i === activeIndex ||
-                    i === sessionStorage.getItem("selected-plant")
+                    i == sessionStorage.getItem("selected-plant")
                       ? styles.active
                       : ""
                   }
