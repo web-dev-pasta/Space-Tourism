@@ -1,0 +1,181 @@
+.technology .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("../../../public/assets/technology/background-technology-desktop.jpg");
+  background-size: cover;
+}
+.technology .container {
+  display: flex;
+  gap: 100px;
+  margin-block: 100px;
+}
+.technology .container > div:first-child {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-top: 100px;
+}
+.technology .container > div:last-child {
+  flex: 1;
+}
+.technology .container .photo {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.technology .container .launch > p span {
+  display: inline-block;
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 70px;
+}
+.technology .container .launch > p span:nth-child(1),
+.technology .container .launch > p span:nth-child(2) {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.25);
+}
+.technology .container .launch > p span:nth-child(2) {
+  margin-right: 10px;
+}
+
+.technology .container .vehicle {
+  display: flex;
+  gap: 50px;
+}
+.technology .container .vehicle .tabs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 285px;
+}
+.technology .container .vehicle .tabs span {
+  display: inline-block;
+  width: 60px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+  font-size: 22px;
+  font-family: "Bellefair", serif;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.technology .container .vehicle .tabs span.active,
+.technology .container .vehicle .tabs span:hover {
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+}
+.technology .container .vehicle .info p:first-child {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.technology .container .vehicle .info p:nth-child(2) {
+  font-family: "Bellefair", serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 50px;
+  margin-block: 20px;
+}
+.technology .container .vehicle .info p:last-child {
+  font-family: "Barlow", sans-serif;
+  color: #b4b5c9;
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 440px;
+}
+@media (max-width: 991px) {
+  .technology .bg {
+    background-image: url("../../../public/assets/technology/background-technology-tablet.jpg");
+  }
+}
+@media (max-width: 585px) {
+  .technology .bg {
+    background-image: url("../../../public/assets/technology/background-technology-mobile.jpg");
+  }
+}
+@media (max-width: 1250px) {
+  .technology .container .photo {
+    flex: initial !important;
+  }
+  .technology .container .vehicle .info p:nth-child(2) {
+    font-size: 40px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 991px) {
+  .technology .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .technology .container > div:first-child {
+    padding-left: initial;
+    gap: initial;
+  }
+  .technology .container .launch > p {
+    text-align: center;
+  }
+  .technology .container {
+    padding-inline: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .technology .container .vehicle {
+    flex-direction: column;
+  }
+  .technology .container .vehicle .tabs {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    justify-content: initial;
+    margin: 0 auto;
+    height: 70px;
+  }
+  .technology .container > div:first-child {
+    padding-top: initial;
+  }
+}
+@media (min-width: 586px) {
+  .technology .container .photo img.mobile {
+    display: none;
+  }
+}
+@media (max-width: 585px) {
+  .technology .container {
+    position: relative;
+    gap: initial !important;
+  }
+  .technology .container .photo img.pc {
+    display: none;
+  }
+  .technology .container {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+  .technology .container .vehicle .info p:nth-child(2) {
+    white-space: initial;
+  }
+  .technology .container > div:first-child {
+    padding-top: 70px;
+  }
+  .technology .container {
+    margin-block: initial !important;
+    margin-bottom: 70px !important;
+  }
+}

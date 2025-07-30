@@ -1,0 +1,128 @@
+.home .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("../../../public/assets/home/background-home-desktop.jpg");
+  background-size: cover;
+}
+
+.home .outerContainer {
+  min-height: calc(100vh - 135px);
+  display: flex;
+  align-items: center;
+}
+
+.home .innerContainer {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: end;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.home .innerContainer .explore {
+  justify-self: end;
+  background-color: white;
+  width: 250px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.3s;
+}
+.home .innerContainer .explore::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.105);
+  width: 90%;
+  aspect-ratio: 1;
+  z-index: -1;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.home .innerContainer .explore:hover::before {
+  width: 150%;
+}
+.home .innerContainer .explore p {
+  font-family: "Bellefair", serif;
+  color: black;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.home .innerContainer .explore a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  border-radius: 50%;
+}
+
+.home .innerContainer .space p:first-child {
+  text-transform: uppercase;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: rgb(217, 214, 214);
+}
+
+.home .innerContainer .space h1 {
+  font-family: "Bellefair", serif;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 150px;
+  margin-block: 20px;
+}
+
+.home .innerContainer .space p:last-child {
+  font-family: "Barlow", sans-serif;
+  color: rgb(217, 214, 214);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .home .bg {
+    background-image: url("../../../public/assets/home/background-home-tablet.jpg");
+  }
+  .home .innerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+  .home .innerContainer .space {
+    text-align: center;
+  }
+}
+@media (max-width: 585px) {
+  .home .bg {
+    background-image: url("../../../public/assets/home/background-home-mobile.jpg");
+  }
+  .home .innerContainer .space h1 {
+    font-size: 100px;
+  }
+  .home .innerContainer .space p:first-child {
+    font-size: 22px;
+  }
+  .home .innerContainer .space p:last-child {
+    font-weight: 400;
+    font-size: 16px;
+    color: #d0d6f9;
+  }
+  .home .innerContainer .space p:last-child br {
+    display: none;
+  }
+  .home .innerContainer .explore {
+    margin-bottom: 80px;
+  }
+}
