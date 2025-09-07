@@ -52,7 +52,7 @@ function Home() {
             className={styles.explore}
           >
             <p>Explore</p>
-            <Link to={"/destination"}></Link>
+            <Link to={"/destination"}>Explore</Link>
           </motion.div>
         </div>
       </div>

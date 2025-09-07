@@ -52,18 +52,19 @@
 .home .innerContainer .explore:hover::before {
   width: 150%;
 }
-.home .innerContainer .explore p {
-  font-family: "Bellefair", serif;
-  color: black;
-  text-transform: uppercase;
-  font-size: 30px;
-}
 .home .innerContainer .explore a {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 99;
   border-radius: 50%;
+  font-family: "Bellefair", serif;
+  color: black;
+  text-transform: uppercase;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+align-items: center;
 }
 
 .home .innerContainer .space p:first-child {
