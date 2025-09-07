@@ -51,7 +51,6 @@ function Home() {
             transition={{ duration: 1 }}
             className={styles.explore}
           >
-            <p>Explore</p>
             <Link to={"/destination"}>Explore</Link>
           </motion.div>
         </div>
